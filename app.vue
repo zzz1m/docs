@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 
 const { seo } = useAppConfig()
 
@@ -49,5 +50,7 @@ provide('navigation', navigation)
     </ClientOnly>
 
     <UNotifications />
+
+    <SpeedInsights />
   </div>
 </template>
