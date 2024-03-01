@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
-import { SpeedInsights } from '@vercel/speed-insights/vue';
+import { SpeedInsights } from '@vercel/speed-insights/vue'
 
 const { seo } = useAppConfig()
 
