@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     }
   },
   ui: {
-    icons: ['heroicons', 'simple-icons']
+    icons: ['heroicons', 'simple-icons', 'radix-icons', 'ant-design', 'ri']
   },
   // Fonts
   fontMetrics: {

@@ -1,3 +1,8 @@
+---
+title: package.json
+---
+
+```json
 {
   "name": "nuxt-ui-pro-template-docs",
   "private": true,
@@ -33,3 +38,4 @@
     "vue-tsc": "^1.8.27"
   }
 }
+```

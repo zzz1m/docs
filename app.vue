@@ -31,11 +31,28 @@ useSeoMeta({
 })
 
 provide('navigation', navigation)
+provide('files', files)
+
+const links = computed(() => {
+  return [{
+    label: '文章',
+    icon: 'i-heroicons-bars-3-bottom-left-16-solid',
+    to: '/blog'
+  }, {
+    label: '项目',
+    icon: 'i-radix-icons-mix',
+    to: '/projects'
+  }, {
+    label: '关于',
+    icon: 'i-radix-icons-mix',
+    to: '/about'
+  }].filter(Boolean)
+})
 </script>
 
 <template>
   <div>
-    <Header />
+    <Header :links="links" />
 
     <UMain>
       <NuxtLayout>
