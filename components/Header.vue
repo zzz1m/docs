@@ -30,13 +30,15 @@ const { metaSymbol } = useShortcuts()
     </template>
 
     <template #right>
-      <ColorPicker />
-
       <UTooltip v-if="header?.search" text="Search" :shortcuts="[metaSymbol, 'K']" :popper="{ strategy: 'absolute' }">
         <UContentSearchButton :label="null" />
       </UTooltip>
 
+      <ColorPicker v-if="header?.colorPicker" />
+
       <UColorModeButton v-if="header?.colorMode" />
+
+
 
       <!-- <template v-if="header?.links">
         <UButton

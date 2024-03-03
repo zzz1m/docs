@@ -1,5 +1,5 @@
-title: 'Z1M - Tech Blog & Docs'
-description: Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
+title: 'Z1M - Tech Blog'
+description: 自娱自乐的小站，记录日常工作、学习以及生活，坚持做长期主义者。
 navigation: false
 hero:
   title: '博客 · 代码 · 生活'
@@ -27,7 +27,7 @@ hero:
       color: gray
       trailing: true
       to: /about
-      target: _blank
+      # target: _blank
   code: |
     ```bash [Terminal]
     npx nuxi init -t github:nuxt-ui-pro/docs

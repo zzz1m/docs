@@ -13,7 +13,7 @@ export default defineAppConfig({
     // },
   },
   seo: {
-    siteName: 'Nuxt UI Pro - Docs template',
+    siteName: 'Z1M - Tech Blog',
   },
   header: {
     logo: {
@@ -23,6 +23,7 @@ export default defineAppConfig({
     },
     search: true,
     colorMode: true,
+    colorPicker: true
     // links: [
     //   {
     //     icon: 'i-simple-icons-github',
@@ -33,7 +34,7 @@ export default defineAppConfig({
     // ],
   },
   footer: {
-    credits: 'Copyright © 2024 Z1M',
+    credits: 'Copyright © 2024',
     colorMode: false,
     links: [
       {

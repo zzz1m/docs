@@ -1,6 +1,6 @@
 <script lang='ts' setup>
 const { data: page } = await useAsyncData('projects', () => queryContent('/projects').findOne())
-console.log(page)
+
 useSeoMeta({
   titleTemplate: '',
   title: page.value.title,
