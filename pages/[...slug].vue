@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { withoutTrailingSlash } from 'ufo'
+// import type { NavItem } from '@nuxt/content/dist/runtime/types'
 
 definePageMeta({
   layout: 'docs'
@@ -33,6 +34,8 @@ defineOgImage({
 })
 
 const headline = computed(() => findPageHeadline(page.value))
+// const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
+// const breadcrumb = computed(() => findPageBreadcrumb(navigation.value, page.value)?.map(t => ({ label: t.title, to: t._path })))
 
 const links = computed(() => [toc?.bottom?.edit && {
   icon: 'i-heroicons-pencil-square',
@@ -44,7 +47,11 @@ const links = computed(() => [toc?.bottom?.edit && {
 
 <template>
   <UPage>
-    <UPageHeader :title="page.title" :description="page.description" :links="page.links" :headline="headline" />
+    <UPageHeader :title="page.title" :description="page.description" :links="page.links" :headline="headline">
+      <!-- <template #headline>
+        <UBreadcrumb :links="breadcrumb" />
+      </template> -->
+    </UPageHeader>
 
     <UPageBody prose>
       <ContentRenderer v-if="page.body" :value="page" />

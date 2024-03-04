@@ -24,6 +24,11 @@ export default defineNuxtConfig({
   fontMetrics: {
     fonts: ['DM Sans']
   },
+  content: {
+    highlight: {
+      langs: ['rust', 'toml']
+    }
+  },
   googleFonts: {
     display: 'swap',
     download: true,

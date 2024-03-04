@@ -1,0 +1,28 @@
+title: 关于
+description: 关于我 & 关于本站
+navigation: false
+items:
+  - title: 关于我
+    headline: About Me
+    description: 97年男生，北漂程序员
+    align: left
+    img: https://picsum.photos/id/357/3888/2592
+    links:
+      - label: 查看简历
+        to: /resumeLink
+        color: gray
+        size: lg
+        target: _blank
+        trailingIcon: 'i-heroicons-arrow-up-right-20-solid'
+  - title: 关于本站
+    headline: About This Site
+    description: 2024年上线，取自我的名字，曾一鸣
+    align: right
+    img: https://picsum.photos/id/119/3264/2176
+    links:
+      - label: 开发日志
+        to: /devlog/blog
+        color: gray
+        size: lg
+        target: _blank
+        trailingIcon: 'i-heroicons-arrow-up-right-20-solid'
