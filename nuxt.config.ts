@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
   modules: [
     '@nuxt/content',
-    '@nuxt/image',
     '@nuxt/ui',
     '@nuxthq/studio',
     '@nuxtjs/fontaine',
