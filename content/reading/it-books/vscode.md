@@ -1,3 +1,3 @@
 ---
-title: Visual Studio Code 权威指南
+title: VS Code 权威指南
 ---
