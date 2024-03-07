@@ -35,6 +35,54 @@ pdfjs-dist目录：
 - 打印
 - 排列布局：竖排、双排
 
-## 参考库
+## 交互问题
 
 ## PDF文件转图片预览
+
+## 问题记录
+
+### 使用 `pdfjs-dist@3.11.174` 报警告
+
+::callout
+The `--scale-factor` CSS-variable must be set, to the same value as `viewport.scale`, either on the `container`-element itself or higher up in the DOM.
+::
+
+### 字体缺失，需要指定 `cMapUrl`
+
+::callout
+Warning: Cannot load system font: STSong-Light, installing it could help to improve PDF rendering.
+::
+
+```typescript
+pdfjsLib.getDocument({
+  cMapUrl: 'https://unpkg.com/pdfjs-dist@3.11.174/cmaps/'
+})
+```
+
+### `unexpected EOF in bcmap`
+
+::callout
+Warning: Error during font loading: unexpected EOF in bcmap
+::
+
+### 过时的 API 使用：`Deprecated API usage`
+
+::callout
+No "GlobalWorkerOptions.workerSrc" specified.
+::
+
+::callout
+The TextLayerRender `textContent`/`textContentStream` parameters will be removed in the future, please use `textContentSource` instead.
+::
+
+### pageProxy 占用
+
+同一个页同时进行了绘制，比如页面和缩略图同时绘制
+
+::callout
+Warning: Timer has not been started for Rendering
+::
+
+::callout
+Warning: Timer has not been started for Overall
+::
