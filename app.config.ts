@@ -23,7 +23,7 @@ export default defineAppConfig({
     },
     search: true,
     colorMode: true,
-    colorPicker: true
+    colorPicker: true,
     // links: [
     //   {
     //     icon: 'i-simple-icons-github',
@@ -38,27 +38,27 @@ export default defineAppConfig({
     colorMode: false,
     links: [
       {
-        icon: 'i-ri-weibo-fill',
-        to: 'https://weibo.com/zzz1m',
-        target: '_blank',
+        'icon': 'i-ri-weibo-fill',
+        'to': 'https://weibo.com/zzz1m',
+        'target': '_blank',
         'aria-label': 'Weibo',
       },
       {
-        icon: 'i-ant-design-bilibili-outlined',
-        to: 'https://space.bilibili.com/474757039',
-        target: '_blank',
+        'icon': 'i-ant-design-bilibili-outlined',
+        'to': 'https://space.bilibili.com/474757039',
+        'target': '_blank',
         'aria-label': 'Bilbili',
       },
       {
-        icon: 'i-ri-yuque-fill',
-        to: 'https://www.yuque.com/zzz1m',
-        target: '_blank',
+        'icon': 'i-ri-yuque-fill',
+        'to': 'https://www.yuque.com/zzz1m',
+        'target': '_blank',
         'aria-label': 'Yueque',
       },
       {
-        icon: 'i-simple-icons-github',
-        to: 'https://github.com/zzz1m',
-        target: '_blank',
+        'icon': 'i-simple-icons-github',
+        'to': 'https://github.com/zzz1m',
+        'target': '_blank',
         'aria-label': 'GitHub',
       },
     ],

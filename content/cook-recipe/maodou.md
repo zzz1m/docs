@@ -47,7 +47,7 @@ description: 好吃，成本不到十块钱，搞定一天伙食
   ::
   ::img{src="https://cdn.jsdelivr.net/gh/zzz1m/assets@master/img/cook-maodou-5.jpg"}
   ::
-  
+
 ::
 
 ## 🍱 成品

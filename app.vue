@@ -4,22 +4,19 @@ import { SpeedInsights } from '@vercel/speed-insights/vue'
 
 const { seo } = useAppConfig()
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
+const { data: navigation } = await useAsyncData('navigation', () =>
+  fetchContentNavigation())
 const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
   default: () => [],
-  server: false
+  server: false,
 })
 
 useHead({
-  meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-  ],
-  link: [
-    { rel: 'icon', href: '/favicon.ico' }
-  ],
+  meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+  link: [{ rel: 'icon', href: '/favicon.ico' }],
   htmlAttrs: {
-    lang: 'en'
-  }
+    lang: 'en',
+  },
 })
 
 useSeoMeta({
@@ -27,26 +24,30 @@ useSeoMeta({
   ogSiteName: seo?.siteName,
   ogImage: 'https://docs-template.nuxt.dev/social-card.png',
   twitterImage: 'https://docs-template.nuxt.dev/social-card.png',
-  twitterCard: 'summary_large_image'
+  twitterCard: 'summary_large_image',
 })
 
 provide('navigation', navigation)
 provide('files', files)
 
 const links = computed(() => {
-  return [{
-    label: '文章',
-    icon: 'i-heroicons-bars-3-bottom-left-16-solid',
-    to: '/blog'
-  }, {
-    label: '项目',
-    icon: 'i-radix-icons-mix',
-    to: '/projects'
-  }, {
-    label: '关于',
-    icon: 'i-radix-icons-mix',
-    to: '/about'
-  }].filter(Boolean)
+  return [
+    {
+      label: '文章',
+      icon: 'i-heroicons-bars-3-bottom-left-16-solid',
+      to: '/blog',
+    },
+    {
+      label: '项目',
+      icon: 'i-radix-icons-mix',
+      to: '/projects',
+    },
+    {
+      label: '关于',
+      icon: 'i-radix-icons-mix',
+      to: '/about',
+    },
+  ].filter(Boolean)
 })
 </script>
 

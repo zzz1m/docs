@@ -3,7 +3,7 @@ import type { NavItem } from '@nuxt/content/dist/runtime/types'
 import type { HeaderLink } from '#ui-pro/types'
 
 defineProps<{
-  links: HeaderLink[]
+  links?: HeaderLink[]
 }>()
 
 const navigation = inject<NavItem[]>('navigation', [])
@@ -37,8 +37,6 @@ const { metaSymbol } = useShortcuts()
       <ColorPicker v-if="header?.colorPicker" />
 
       <UColorModeButton v-if="header?.colorMode" />
-
-
 
       <!-- <template v-if="header?.links">
         <UButton

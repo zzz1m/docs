@@ -1,36 +1,35 @@
 <script setup lang="ts">
 import { withoutTrailingSlash } from 'ufo'
+
 // import type { NavItem } from '@nuxt/content/dist/runtime/types'
 
 definePageMeta({
-  layout: 'docs'
+  layout: 'docs',
 })
 
 const route = useRoute()
 const { toc, seo } = useAppConfig()
 
 const { data: post } = await useAsyncData(route.path, () => queryContent(route.path).findOne())
-if (!post.value) {
+if (!post.value)
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
-}
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => queryContent()
   .where({ _extension: 'md', navigation: { $ne: false } })
   .only(['title', 'description', '_path'])
-  .findSurround(withoutTrailingSlash(route.path))
-)
+  .findSurround(withoutTrailingSlash(route.path)))
 
 useSeoMeta({
   title: post.value.title,
   ogTitle: `${post.value.title} - ${seo?.siteName}`,
   description: post.value.description,
-  ogDescription: post.value.description
+  ogDescription: post.value.description,
 })
 
 defineOgImage({
   component: 'Docs',
   title: post.value.title,
-  description: post.value.description
+  description: post.value.description,
 })
 
 const headline = computed(() => findPageHeadline(post.value))

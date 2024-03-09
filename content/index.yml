@@ -1,9 +1,9 @@
-title: 'Z1M - Tech Blog'
+title: Z1M - Tech Blog
 description: 自娱自乐的小站，记录日常工作、学习以及生活，坚持做长期主义者。
 navigation: false
 hero:
-  title: '博客 · 代码 · 生活'
-  description: '自娱自乐的小站，记录日常工作、学习以及生活，坚持做长期主义者。'
+  title: 博客 · 代码 · 生活
+  description: 自娱自乐的小站，记录日常工作、学习以及生活，坚持做长期主义者。
   orientation: horizontal
   headline:
     label: 使用 Nuxt 制作
@@ -13,13 +13,13 @@ hero:
     - label: 文章
       icon: i-heroicons-bars-3-bottom-left-16-solid
       trailing: true
-      to: '/blog'
+      to: /blog
       size: lg
     - label: 项目
       icon: i-radix-icons-mix
       trailing: true
       color: gray
-      to: '/projects'
+      to: /projects
       size: lg
     - label: 关于
       icon: i-heroicons-arrow-up-right-20-solid
@@ -33,43 +33,43 @@ hero:
     npx nuxi init -t github:nuxt-ui-pro/docs
     ```
 features:
-  title: 'All-in-one docs template'
+  title: All-in-one docs template
   links:
-    - label: 'Explore Nuxt UI Pro'
-      icon: 'i-simple-icons-nuxtdotjs'
-      trailingIcon: 'i-heroicons-arrow-right-20-solid'
-      color: 'gray'
+    - label: Explore Nuxt UI Pro
+      icon: i-simple-icons-nuxtdotjs
+      trailingIcon: i-heroicons-arrow-right-20-solid
+      color: gray
       to: 'https://ui.nuxt.com/pro'
-      target: '_blank'
+      target: _blank
       size: lg
   items:
-    - title: 'Nuxt 3'
-      description: 'Powered by Nuxt 3 for optimal performances and SEO.'
-      icon: 'i-simple-icons-nuxtdotjs'
+    - title: Nuxt 3
+      description: Powered by Nuxt 3 for optimal performances and SEO.
+      icon: i-simple-icons-nuxtdotjs
       to: 'https://nuxt.com'
-      target: '_blank'
-    - title: 'Markdown'
-      description: 'Write your pages with MDC thanks to Nuxt Content.'
-      icon: 'i-simple-icons-markdown'
+      target: _blank
+    - title: Markdown
+      description: Write your pages with MDC thanks to Nuxt Content.
+      icon: i-simple-icons-markdown
       to: 'https://content.nuxt.com'
-      target: '_blank'
-    - title: 'Nuxt UI'
-      description: 'Offers a very large set of full customizable components.'
-      icon: 'i-heroicons-sparkles-20-solid'
+      target: _blank
+    - title: Nuxt UI
+      description: Offers a very large set of full customizable components.
+      icon: i-heroicons-sparkles-20-solid
       to: 'https://ui.nuxt.com'
-      target: '_blank'
-    - title: 'TypeScript'
-      description: 'A fully typed development experience.'
-      icon: 'i-simple-icons-typescript'
+      target: _blank
+    - title: TypeScript
+      description: A fully typed development experience.
+      icon: i-simple-icons-typescript
       to: 'https://www.typescriptlang.org'
-      target: '_blank'
-    - title: 'Nuxt Studio'
-      description: 'Supported by Nuxt Studio for fast updates and previews.'
-      icon: 'i-simple-icons-nuxtdotjs'
+      target: _blank
+    - title: Nuxt Studio
+      description: Supported by Nuxt Studio for fast updates and previews.
+      icon: i-simple-icons-nuxtdotjs
       to: 'https://nuxt.studio'
-      target: '_blank'
-    - title: 'Search'
-      description: 'A full-text search modal empowered by Fuse.js.'
-      icon: 'i-heroicons-magnifying-glass-20-solid'
+      target: _blank
+    - title: Search
+      description: A full-text search modal empowered by Fuse.js.
+      icon: i-heroicons-magnifying-glass-20-solid
       to: 'https://ui.nuxt.com/pro/components/docs/docs-search'
-      target: '_blank'
+      target: _blank
