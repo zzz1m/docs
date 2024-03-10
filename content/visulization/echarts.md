@@ -1,3 +1,3 @@
 ---
-title: Echarts 源码阅读
+title: Echarts 源码学习
 ---

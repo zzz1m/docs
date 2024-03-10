@@ -1,3 +1,3 @@
 ---
-title: 'AntV G 源码阅读'
+title: AntV G 源码学习
 ---
