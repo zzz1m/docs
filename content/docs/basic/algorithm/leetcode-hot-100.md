@@ -49,7 +49,9 @@ var twoSum = function(nums, target) {
 };
 ```
 
-### [2-两数相加-medium](https://leetcode.cn/problems/add-two-numbers/)
+### 2-两数相加-medium
+
+[https://leetcode.cn/problems/add-two-numbers/](https://leetcode.cn/problems/add-two-numbers/)
 
 考察单向链表
 
@@ -97,7 +99,7 @@ var addTwoNumbers = function(l1, l2) {
     return list
 };
 /**
- * 
+ *
  */
 var addTwoNumbers = function(l1, l2) {
 
@@ -112,7 +114,7 @@ var addTwoNumbers = function(l1, l2) {
         var val = node.val + a.val + b.val
         node.val = val % 10
         var next = new ListNode(val > 9? 1: 0)
-    
+
         if(a.next || b.next) {
             node.next = fn(next, a.next || { val: 0 }, b.next || { val: 0 })
         } else if(next.val === 1) {
@@ -129,10 +131,10 @@ var addTwoNumbers = function(l1, l2) {
  */
 var addTwoNumbers = function(l1, l2) {
     var fn = function(node, a, b) {
-        var val = node.val + (a && a.val || 0 ) + (b && b.val || 0) 
+        var val = node.val + (a && a.val || 0 ) + (b && b.val || 0)
         node.val = val % 10
         var next = new ListNode(val > 9? 1: 0)
-    
+
         if(a && a.next || b && b.next) {
             node.next = fn(next, a && a.next, b && b.next)
         } else if(next.val === 1) {
@@ -144,7 +146,9 @@ var addTwoNumbers = function(l1, l2) {
 }
 ```
 
-### [3-无重复字符的最长子串-medium](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
+### 3-无重复字符的最长子串-medium
+
+[https://leetcode.cn/problems/longest-substring-without-repeating-characters/](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
 
 暴力解法
 
@@ -160,7 +164,7 @@ var lengthOfLongestSubstring = function(s) {
     for(var i = 0; i < s.length; i++) {
         var currMap = {}, len = 1
         currMap[s[i]] = i + 1
-        
+
         for(var j = i + 1; j < s.length; j++) {
             if(currMap[s[j]]) {
                 break
@@ -173,7 +177,6 @@ var lengthOfLongestSubstring = function(s) {
         maxLen = maxLen > len? maxLen: len
     }
 
-
     return maxLen
 };
 ```
@@ -184,7 +187,7 @@ var lengthOfLongestSubstring = function(s) {
 /**
  * @param {string} s
  * @return {number}
- * 
+ *
  * 执行用时：108 ms, 在所有 JavaScript 提交中击败了22.15%的用户
  * 内存消耗：46.6 MB, 在所有 JavaScript 提交中击败了32.46%的用户
  */
@@ -207,8 +210,9 @@ var lengthOfLongestSubstring = function(s) {
 };
 ```
 
-### [4-寻找两个正序数组的中位数-hard](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
+### 4-寻找两个正序数组的中位数-hard
 
+[https://leetcode.cn/problems/median-of-two-sorted-arrays/](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
 
 时间复杂度得是 $O(log(m+n))$
 
@@ -224,7 +228,7 @@ var lengthOfLongestSubstring = function(s) {
  * 执行用时：108 ms, 在所有 JavaScript 提交中击败了28.73%的用户
  * 内存消耗：46.6 MB, 在所有 JavaScript 提交中击败了37.87%的用户
  * 排序：插入的时候逐一对比
- * 
+ *
  * 错 没看清题目，这是两个正序的数组，不需要考虑排序
  */
 var findMedianSortedArrays = function(nums1, nums2) {
@@ -270,7 +274,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
 /**
  * 执行用时：108 ms, 在所有 JavaScript 提交中击败了28.73%的用户
  * 内存消耗：45.4 MB, 在所有 JavaScript 提交中击败了75.51%的用户
- * 
+ *
  * 把里面的list.push(xxx) 换成 list[i] = xxx
  * 执行用时：92 ms, 在所有 JavaScript 提交中击败了74.56%的用户
  */
@@ -340,8 +344,9 @@ var findMedianSortedArrays = function(nums1, nums2) {
  */
 ```
 
+### 5-最长回文子串-medium]
 
-### [5-最长回文子串-medium](https://leetcode.cn/problems/longest-palindromic-substring/)
+[https://leetcode.cn/problems/longest-palindromic-substring/](https://leetcode.cn/problems/longest-palindromic-substring/)
 
 动态规划
 
@@ -354,7 +359,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
  */
 var longestPalindrome = function(s) {
     var dp = [], maxLen = 0, left = 0, right = 0
-    for(var i = 0; i < s.length; i++) { 
+    for(var i = 0; i < s.length; i++) {
         dp[i] = []
         dp[i][i] = true
     }
@@ -410,12 +415,14 @@ var longestPalindrome = function(s) {
             end++
         }
     }
-    
+
     return s.substring(left, right + 1)
 };
 ```
 
-### [20-有效的括号-easy](https://leetcode.cn/problems/valid-parentheses/)
+### 20-有效的括号-easy
+
+[https://leetcode.cn/problems/valid-parentheses/](https://leetcode.cn/problems/valid-parentheses/)
 
 利用一定存在相邻匹配的括号，用 `replace` 不断去掉一对，判断是否能清空
 
@@ -454,7 +461,9 @@ var isValid = function(s) {
 };
 ```
 
-### [21-合并两个有序链表-easy](https://leetcode.cn/problems/merge-two-sorted-lists/)
+### 21-合并两个有序链表-easy
+
+[https://leetcode.cn/problems/merge-two-sorted-lists/](https://leetcode.cn/problems/merge-two-sorted-lists/)
 
 注意如果有一条链表为空时，直接当前节点的 `next` 指向另一节点
 
@@ -493,9 +502,9 @@ var mergeTwoLists = function(list1, list2) {
 };
 ```
 
-### [70-爬楼梯-easy](https://leetcode.cn/problems/climbing-stairs/)
+### 70-爬楼梯-easy
 
-
+[https://leetcode.cn/problems/climbing-stairs](https://leetcode.cn/problems/climbing-stairs)
 
 ```javascript
 /* 动态规划五部曲：
@@ -555,7 +564,9 @@ var climbStairs = function(n) {
 };
 ```
 
-### [75-颜色分类-medium](https://leetcode.cn/problems/sort-colors/)
+### 75-颜色分类-medium
+
+[https://leetcode.cn/problems/sort-colors/](https://leetcode.cn/problems/sort-colors/)
 
 遍历数组，`n0/n1/n2` 三个指针分别指向三个区的尾部
 
@@ -612,8 +623,9 @@ var sortColors = function(nums) {
 };
 ```
 
+### 128-最长连续序列-medium
 
-### [128-最长连续序列-medium](https://leetcode.cn/problems/longest-consecutive-sequence)
+[https://leetcode.cn/problems/longest-consecutive-sequence](https://leetcode.cn/problems/longest-consecutive-sequence)
 
 哈希表解法，先把每个数加入哈希表，然后判断 `hash[n-1]` 不存在的情况下，用 `while` 不断试探 `hash[n+1]` 是否存在，并更新比较得到最大长度
 
@@ -671,7 +683,9 @@ var longestConsecutive = function(nums) {
 };
 ```
 
-### [136-只出现一次的数字-easy](https://leetcode.cn/problems/single-number/)
+### 136-只出现一次的数字-easy
+
+[https://leetcode.cn/problems/single-number/](https://leetcode.cn/problems/single-number/)
 
 使用哈希表
 
@@ -712,8 +726,9 @@ var singleNumber = function(nums) {
 }
 ```
 
+### 139-单词拆分-medium
 
-### [139-单词拆分-medium](https://leetcode.cn/problems/word-break/)
+[https://leetcode.cn/problems/word-break/](https://leetcode.cn/problems/word-break/)
 
 使用动态规划：
 
@@ -740,7 +755,9 @@ var wordBreak = function(s, wordDict) {
 };
 ```
 
-### [206-反转链表-easy](https://leetcode.cn/problems/reverse-linked-list/)
+### 206-反转链表-easy
+
+[https://leetcode.cn/problems/reverse-linked-list/](https://leetcode.cn/problems/reverse-linked-list/)
 
 遍历
 
@@ -781,7 +798,9 @@ var reverseList = function(head) {
 };
 ```
 
-### [234-回文链表-easy](https://leetcode.cn/problems/palindrome-linked-list/)
+### 234-回文链表-easy
+
+[https://leetcode.cn/problems/palindrome-linked-list/](https://leetcode.cn/problems/palindrome-linked-list/)
 
 先遍历用栈存链表的值或者反转链表，再原链表值进行对比
 
@@ -815,7 +834,9 @@ var isPalindrome = function(head) {
 
 或者把链表转成字符串，再判断回文字符串
 
-### [283-移动零-easy](https://leetcode.cn/problems/move-zeroes/)
+### 283-移动零-easy
+
+[https://leetcode.cn/problems/move-zeroes/](https://leetcode.cn/problems/move-zeroes/)
 
 遍历，如果遇到 `0` 则往后找一个非 `0` 数字交换位置
 
@@ -857,7 +878,9 @@ var moveZeroes = function(nums) {
 };
 ```
 
-### [338-比特位计数-easy](https://leetcode.cn/problems/counting-bits/)
+### 338-比特位计数-easy
+
+[https://leetcode.cn/problems/counting-bits/](https://leetcode.cn/problems/counting-bits/)
 
 类似 [461-汉明距离-easy](https://leetcode.cn/problems/hamming-distance/) 使用按位右移计算
 
@@ -893,7 +916,7 @@ var countBits = function(n) {
     var result = [0]
     for(var i = 1; i <= n; i++) {
         // 先右移再加最后一位是否为 1
-        result[i] = result[i >> 1] + (i & 1) 
+        result[i] = result[i >> 1] + (i & 1)
     }
     return result
 };
@@ -911,7 +934,7 @@ var countBits = function(n) {
     for(var i = 1; i <= n; i++) {
         if(i % 2) {
             // 奇数最末尾加1
-            result[i] = result[i - 1] + 1 
+            result[i] = result[i - 1] + 1
         } else {
             // 偶数，相当于右边多加个0
             result[i] = result[i / 2]
@@ -921,7 +944,9 @@ var countBits = function(n) {
 };
 ```
 
-### [300-最长递增子序列-medium](https://leetcode.cn/problems/longest-increasing-subsequence/)
+### 300-最长递增子序列-medium
+
+[https://leetcode.cn/problems/longest-increasing-subsequence/](https://leetcode.cn/problems/longest-increasing-subsequence/)
 
 动态规划 $O(n^2)$
 
@@ -952,8 +977,9 @@ var lengthOfLIS = function(nums) {
 
 二分查找法??
 
+### 448-找到所有数组中消失的数字-easy
 
-### [448-找到所有数组中消失的数字-easy](https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array/)
+[https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array/](https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array/)
 
 使用哈希表或者 `Set`，遍历 `1~n` 获取不在哈希表的数字
 
@@ -981,7 +1007,6 @@ var findDisappearedNumbers = function(nums) {
 原始数组：`[4,3,2,7,8,2,3,1]`<br>
 重置后为：`[-4,-3,-2,-7,8,2,-3,-1]`
 
-
 ```javascript
 var findDisappearedNumbers = function(nums) {
     var result = []
@@ -997,8 +1022,9 @@ var findDisappearedNumbers = function(nums) {
 };
 ```
 
+### 461-汉明距离-easy
 
-### [461-汉明距离-easy](https://leetcode.cn/problems/hamming-distance/)
+[https://leetcode.cn/problems/hamming-distance/](https://leetcode.cn/problems/hamming-distance/)
 
 考察位运算
 
@@ -1021,7 +1047,9 @@ var hammingDistance = function(x, y) {
 };
 ```
 
-### [647-回文子串-medium](https://leetcode.cn/problems/palindromic-substrings/submissions/)
+### 647-回文子串-medium
+
+[https://leetcode.cn/problems/palindromic-substrings/submissions/](https://leetcode.cn/problems/palindromic-substrings/submissions/)
 
 类似 [5-最长回文子串-medium](https://leetcode.cn/problems/longest-palindromic-substring/)
 

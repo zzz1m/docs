@@ -36,6 +36,14 @@ const { metaSymbol } = useShortcuts()
       <ColorPicker v-if="header?.colorPicker" />
 
       <UColorModeButton v-if="header?.colorMode" />
+
+      <!-- <template v-if="header?.links">
+        <UButton
+          v-for="(link, index) of header.links"
+          :key="index"
+          v-bind="{ color: 'gray', variant: 'ghost', ...link }"
+        />
+      </template> -->
     </template>
 
     <template #panel>

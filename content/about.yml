@@ -13,7 +13,7 @@ items:
         color: gray
         size: lg
         target: _blank
-        trailingIcon: 'i-heroicons-arrow-up-right-20-solid'
+        trailingIcon: i-heroicons-arrow-up-right-20-solid
   - title: 关于本站
     headline: About This Site
     description: 2024年上线，取自我的名字，曾一鸣
@@ -25,4 +25,4 @@ items:
         color: gray
         size: lg
         target: _blank
-        trailingIcon: 'i-heroicons-arrow-up-right-20-solid'
+        trailingIcon: i-heroicons-arrow-up-right-20-solid

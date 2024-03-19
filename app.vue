@@ -8,10 +8,11 @@ const { headerLinks } = useNavigation()
 const colorMode = useColorMode()
 const color = computed(() => colorMode.value === 'dark' ? '#020420' : 'white')
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
+const { data: navigation } = await useAsyncData('navigation', () =>
+  fetchContentNavigation())
 const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
   default: () => [],
-  server: false
+  server: false,
 })
 
 useHead({
@@ -32,7 +33,7 @@ useSeoMeta({
   ogSiteName: seo?.siteName,
   ogImage: 'https://docs-template.nuxt.dev/social-card.png',
   twitterImage: 'https://docs-template.nuxt.dev/social-card.png',
-  twitterCard: 'summary_large_image'
+  twitterCard: 'summary_large_image',
 })
 
 provide('navigation', navigation)

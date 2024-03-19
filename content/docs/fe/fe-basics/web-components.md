@@ -1,3 +1,3 @@
 ---
-title: Web Components
+title: WebComponents
 ---

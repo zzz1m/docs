@@ -17,46 +17,45 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ```shell
 Welcome to Rust!
-​
+
 This will download and install the official compiler for the Rust
 programming language, and its package manager, Cargo.
-​
+
 Rustup metadata and toolchains will be installed into the Rustup
 home directory, located at:
-​
+
   /Users/admin/.rustup
-​
+
 This can be modified with the RUSTUP_HOME environment variable.
-​
+
 The Cargo home directory is located at:
-​
+
   /Users/admin/.cargo
-​
+
 This can be modified with the CARGO_HOME environment variable.
-​
+
 The cargo, rustc, rustup and other commands will be added to
 Cargo's bin directory, located at:
-​
+
   /Users/admin/.cargo/bin
-​
+
 This path will then be added to your PATH environment variable by
 modifying the profile files located at:
-​
+
   /Users/admin/.profile
   /Users/admin/.bash_profile
   /Users/admin/.zshenv
-​
+
 You can uninstall at any time with rustup self uninstall and
 these changes will be reverted.
-​
+
 Current installation options:
-​
-​
+
    default host triple: x86_64-apple-darwin
      default toolchain: stable (default)
                profile: default
   modify PATH variable: yes
-​
+
 1) Proceed with installation (default)
 2) Customize installation
 3) Cancel installation
@@ -72,8 +71,8 @@ info: latest update on 2023-08-03, rust version 1.71.1 (eb26296b5 2023-08-03)
 info: downloading component 'cargo'
 info: downloading component 'clippy'
 info: downloading component 'rust-docs'
-info: downloading component 'rust-std'  
-info: downloading component 'rustc'  
+info: downloading component 'rust-std'
+info: downloading component 'rustc'
 info: downloading component 'rustfmt'
 info: installing component 'cargo'
 info: installing component 'clippy'
@@ -83,13 +82,13 @@ info: installing component 'rustc'
 info: installing component 'rustfmt'
 info: default toolchain set to 'stable-x86_64-apple-darwin'
   stable-x86_64-apple-darwin installed - rustc 1.71.1 (eb26296b5 2023-08-03)
-​
+
 Rust is installed now. Great!
-​
+
 To get started you may need to restart your current shell.
 This would reload your PATH environment variable to include
 Cargo's bin directory ($HOME/.cargo/bin).
-​
+
 To configure your current shell, run:
 source "$HOME/.cargo/env"
 ```
@@ -109,7 +108,7 @@ Rust 的包管理器和构架工具，常用命令行：
 - 测试成功安装 Rust 和 Cargo：`cargo --version`
 
 ```shell
-➜  ~ cargo --version 
+➜  ~ cargo --version
 cargo 1.71.1 (7f1d04c00 2023-07-29)
 ```
 
@@ -148,7 +147,7 @@ error: linking with `cc` failed: exit status: 1
   |
   = note: # ...一长串的错误和地址
   = note: xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
-​
+
 error: could not compile `hello-rust` (bin "hello-rust") due to previous error
 ```
 
@@ -173,9 +172,9 @@ Hello, world!
 name = "hello-rust"
 version = "0.1.0"
 edition = "2021"
-​
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-​
+
 [dependencies]
 ```
 
@@ -210,12 +209,12 @@ Finished dev [unoptimized + debuginfo] target(s) in 6.33s
 ```rust
 use ferris_says::say;
 use std::io::{stdout, BufWriter};
-​
+
 fn main() {
     let stdout = stdout();
     let message = String::from("Hello fellow Rustaceans!");
     let width = message.chars().count();
-​
+
     let mut writer = BufWriter::new(stdout.lock());
     say(message.as_bytes(), width, &mut writer).unwrap();
 }

@@ -7,42 +7,44 @@ export default defineNuxtConfig({
     '@nuxthq/studio',
     '@nuxtjs/fontaine',
     '@nuxtjs/google-fonts',
-    'nuxt-og-image'
+    'nuxt-og-image',
   ],
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     'components:extend': (components) => {
-      const globals = components.filter((c) => ['UButton', 'UIcon', 'UCarousel'].includes(c.pascalName))
+      const globals = components.filter(c =>
+        ['UButton', 'UIcon', 'UCarousel'].includes(c.pascalName),
+      )
 
-      globals.forEach((c) => c.global = true)
-    }
+      globals.forEach(c => (c.global = true))
+    },
   },
   ui: {
-    icons: ['heroicons', 'simple-icons', 'radix-icons', 'ant-design', 'ri']
+    icons: ['heroicons', 'simple-icons', 'radix-icons', 'ant-design', 'ri'],
   },
   // Fonts
   fontMetrics: {
-    fonts: ['DM Sans']
+    fonts: ['DM Sans'],
   },
   content: {
     highlight: {
-      langs: ['rust', 'toml']
-    }
+      langs: ['rust', 'toml'],
+    },
   },
   googleFonts: {
     display: 'swap',
     download: true,
     families: {
-      'DM+Sans': [400, 500, 600, 700]
-    }
+      'DM+Sans': [400, 500, 600, 700],
+    },
   },
   routeRules: {
     '/api/search.json': { prerender: true },
   },
   devtools: {
-    enabled: true
+    enabled: true,
   },
   typescript: {
-    strict: false
-  }
+    strict: false,
+  },
 })
