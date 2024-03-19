@@ -3,6 +3,10 @@ import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 import { SpeedInsights } from '@vercel/speed-insights/vue'
 
 const { seo } = useAppConfig()
+const { headerLinks } = useNavigation()
+
+const colorMode = useColorMode()
+const color = computed(() => colorMode.value === 'dark' ? '#020420' : 'white')
 
 const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
 const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
@@ -12,13 +16,14 @@ const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
 
 useHead({
   meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { key: 'theme-color', name: 'theme-color', content: color }
   ],
   link: [
     { rel: 'icon', href: '/favicon.ico' }
   ],
   htmlAttrs: {
-    lang: 'en'
+    lang: 'zh-CN'
   }
 })
 
@@ -32,27 +37,13 @@ useSeoMeta({
 
 provide('navigation', navigation)
 provide('files', files)
-
-const links = computed(() => {
-  return [{
-    label: '文章',
-    icon: 'i-heroicons-bars-3-bottom-left-16-solid',
-    to: '/blog'
-  }, {
-    label: '项目',
-    icon: 'i-radix-icons-mix',
-    to: '/projects'
-  }, {
-    label: '关于',
-    icon: 'i-radix-icons-mix',
-    to: '/about'
-  }].filter(Boolean)
-})
 </script>
 
 <template>
   <div>
-    <Header :links="links" />
+    <NuxtLoadingIndicator />
+
+    <Header :links="headerLinks" />
 
     <UMain>
       <NuxtLayout>

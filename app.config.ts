@@ -23,15 +23,24 @@ export default defineAppConfig({
     },
     search: true,
     colorMode: true,
-    colorPicker: true
-    // links: [
-    //   {
-    //     icon: 'i-simple-icons-github',
-    //     to: 'https://github.com/zzz1m',
-    //     target: '_blank',
-    //     'aria-label': 'My Profile On GitHub',
-    //   },
-    // ],
+    colorPicker: true,
+    navLinks: [
+      {
+        label: '文章',
+        icon: 'i-heroicons-bars-3-bottom-left-16-solid',
+        to: '/blog',
+      },
+      // {
+      //   label: '项目',
+      //   icon: 'i-radix-icons-mix',
+      //   to: '/projects',
+      // },
+      {
+        label: '关于',
+        icon: 'i-radix-icons-mix',
+        to: '/about',
+      },
+    ],
   },
   footer: {
     credits: 'Copyright © 2024',

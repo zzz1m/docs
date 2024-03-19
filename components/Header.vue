@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { NavItem } from '@nuxt/content/dist/runtime/types'
-import type { HeaderLink } from '#ui-pro/types'
+import type { Link } from '#ui-pro/types'
 
 defineProps<{
-  links: HeaderLink[]
+  links?: Link[]
 }>()
 
 const navigation = inject<NavItem[]>('navigation', [])
@@ -14,10 +14,9 @@ const { metaSymbol } = useShortcuts()
 
 <template>
   <UHeader
-    :links="links" :class="{
+    :links="links"
+    :class="{
       'lg:border-0': $route.path === '/',
-      // 'border-primary-200/75 dark:border-primary-900/50': $route.path === '/',
-      // 'border-gray-200 dark:border-gray-800': $route.path !== '/'
     }"
   >
     <template #logo>
@@ -37,16 +36,6 @@ const { metaSymbol } = useShortcuts()
       <ColorPicker v-if="header?.colorPicker" />
 
       <UColorModeButton v-if="header?.colorMode" />
-
-
-
-      <!-- <template v-if="header?.links">
-        <UButton
-          v-for="(link, index) of header.links"
-          :key="index"
-          v-bind="{ color: 'gray', variant: 'ghost', ...link }"
-        />
-      </template> -->
     </template>
 
     <template #panel>

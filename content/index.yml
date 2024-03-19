@@ -13,14 +13,14 @@ hero:
     - label: 文章
       icon: i-heroicons-bars-3-bottom-left-16-solid
       trailing: true
-      to: '/blog'
+      to: '/docs'
       size: lg
-    - label: 项目
-      icon: i-radix-icons-mix
-      trailing: true
-      color: gray
-      to: '/projects'
-      size: lg
+    # - label: 项目
+    #   icon: i-radix-icons-mix
+    #   trailing: true
+    #   color: gray
+    #   to: '/projects'
+    #   size: lg
     - label: 关于
       icon: i-heroicons-arrow-up-right-20-solid
       size: lg
